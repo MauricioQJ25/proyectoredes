@@ -45,7 +45,8 @@ while(1) :
     print("Temp: " + str(temp) + " C")
     t = "Temperatura data: " + str(temp) + " C"
     n = "\n"
-    msg = n + "Acelerometro data:" + n + a + n + b + n + c +n+"Giroscopio data:"+ n + d + n + e + n + f + n + t + n 
+    msg = n + "Acelerometro data:" + n + a + n + b + n + c + n + t + n
+     #+"Giroscopio data:"+ n + d + n + e + n + f + n + t + n 
  
     #msg = raw_input('Enter message to send : ')
      
