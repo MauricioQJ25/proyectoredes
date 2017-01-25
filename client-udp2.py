@@ -26,7 +26,27 @@ while(1) :
     gyro_data = sensor.get_gyro_data()
     temp = sensor.get_temp()
 
-    msg = "Temp: " + str(temp) + " C"
+    print("Accelerometer data")
+    print("x: " + str(accel_data['x']))
+    a = "x: " + str(accel_data['x'])
+    print("y: " + str(accel_data['y']))
+    b = "y: " + str(accel_data['y'])
+    print("z: " + str(accel_data['z']))
+    c = "z: " + str(accel_data['z'])
+
+    print("Gyroscope data")
+    print("x: " + str(gyro_data['x']))
+    d = "x: " + str(gyro_data['x'])
+    print("y: " + str(gyro_data['y']))
+    e = "y: " + str(gyro_data['y'])
+    print("z: " + str(gyro_data['z']))
+    f = "z: " + str(gyro_data['z'])
+
+    print("Temp: " + str(temp) + " C")
+    t = "Temperatura data: " + str(temp) + " C"
+    n = "\n"
+    msg = n + "Acelerometro data:" + n + a + n + b + n + c +n+"Giroscopio data:"+ n + d + n + e + n + f + n + t + n 
+ 
     #msg = raw_input('Enter message to send : ')
      
     try :
@@ -43,3 +63,4 @@ while(1) :
     except socket.error, msg:
         print 'Error Code : ' + str(msg[0]) + ' Message ' + msg[1]
         sys.exit()
+    sleep(1) #tiempo de 1 segundo
