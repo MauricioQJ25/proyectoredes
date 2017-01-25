@@ -8,4 +8,5 @@ ACCESS_SECRET = 'fnSxdpabFZqaCFtWMETJ78jqdJJkmZZxtotgbQkGvwXoq'
 
 api = Twython(CONSUMER_KEY,CONSUMER_SECRET,ACCESS_KEY,ACCESS_SECRET) 
 
-api.update_status(status=sys.argv[1])
+#api.update_status(status=sys.argv[1])
+api.update_status(status='My current CPU temperature is 50')
