@@ -1,7 +1,12 @@
+#!/usr/bin/env python
 '''
     udp socket client
     Silver Moon
 '''
+#create a sensor interface
+from mpu6050 import mpu6050
+from time import sleep
+sensor = mpu6050(0x68)
  
 import socket   #for sockets
 import sys  #for exit
@@ -17,7 +22,12 @@ host = 'localhost';
 port = 8888;
  
 while(1) :
-    msg = raw_input('Enter message to send : ')
+    accel_data = sensor.get_accel_data()
+    gyro_data = sensor.get_gyro_data()
+    temp = sensor.get_temp()
+
+    msg = "Temp: " + str(temp) + " C"
+    #msg = raw_input('Enter message to send : ')
      
     try :
         #Set the whole string
