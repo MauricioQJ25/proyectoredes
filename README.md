@@ -14,7 +14,7 @@ adquisición de datos mediante i2c y publicar los datos adquiridos en una red so
 
 Se usa una tarjeta raspberrypi 3 con raspbian jessie, con la version del kernel 4.4.
 La tarjeta adquiere datos del sensor mpu6050, el cual puede medir acceleración, orientación y temperatura.
-Se programa en lenguaje de programación python un servidor y un cliente.
+Se programa en el lenguaje de programación python un servidor y un cliente.
 El cliente adquiere los datos del sensor y los envía al servidor mediante el protocolo UDP por medio de sockets
 El servidor al recibir los datos del sensor los envía a la siguiente cuenta de twitter:
 
@@ -27,7 +27,7 @@ El protocolo UDP  es un protocolo no orientado a conexión de la capa de transpo
 
 Recordemos las capas vistas en clase:
 
-*Capa 8  Usuario*
+*Capa 8  Usuario*<br />
 Capa 7  Nivel de Aplicación <br />
 Capa 6  Nivel de Presentación<br />
 Capa 5  Nivel de sesion<br />
@@ -42,7 +42,6 @@ Capa 1  Fisica<br />
 Para hacer uso del protocolo i2c, es necesario contar con un driver para la lectura de los datos, este corresponde al módulo de Kernel y se incluye en la carpeta. La tarjeta funcionará como maestro y el sensor como esclavo.
 El protocolo consta de 2 lineas sda y scl, una es el reloj y la otra es la linea de datos. por lo que es necesario conectarlas a los pines correspondientes de nuestra tarjeta de la siguiente manera:
 [liga]
-![alt tag](https://github.com/MauricioQJ25/proyectoredes/blob/master/conexi%C3%B3n.png)
 [liga]
 Tarjeta y sensor
 ![alt tag](https://github.com/MauricioQJ25/proyectoredes/blob/master/sensorconectado.jpeg)
@@ -62,13 +61,15 @@ Se puede observar el comportamiento en la siguiente imagen.
 Por último para mostrar los datos sensados, se muestra las publicaciones en twitter generadas por el servidor.
 
 [liga]
+
+https://twitter.com/Mau_Krack
 ![alt tag](https://github.com/MauricioQJ25/proyectoredes/blob/master/tweet.png)
 
-Referencias.
+###Referencias.
 En la carpeta ejemplos, muestro los códigos en los que me basé para la integración del proyecto, así como las siguientes ligas que me resultaron muy útiles.
-http://pinout.xyz/
-http://www.invensense.com/wp-content/uploads/2015/02/MPU-6000-Register-Map1.pdf
-https://geekytheory.com/tutorial-raspberry-pi-uso-de-twitter-en-python/
-http://developeando.net/sockets-python/
-https://www.raspberrypi.org/documentation/linux/kernel/building.md
-http://www.linuxjournal.com/article/7136
+http://pinout.xyz/<br />
+http://www.invensense.com/wp-content/uploads/2015/02/MPU-6000-Register-Map1.pdf<br />
+https://geekytheory.com/tutorial-raspberry-pi-uso-de-twitter-en-python/<br />
+http://developeando.net/sockets-python/<br />
+https://www.raspberrypi.org/documentation/linux/kernel/building.md<br />
+http://www.linuxjournal.com/article/7136<br />
